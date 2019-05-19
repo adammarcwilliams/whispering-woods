@@ -10,9 +10,5 @@ public class ScaleCube : MonoBehaviour
     {
         DOTween.Kill(transform);
         transform.DOPunchScale(new Vector3(2, 2, 2), 0.5f);
-
-        //AudioSource a;
-        //a.GetSpectrumData(samples, 0, FFTWindow.Hamming);
-        //samples[0]
     }
 }

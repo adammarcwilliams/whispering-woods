@@ -10,5 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54f72e4ef8b28d548a9edf7ae5ddb917, type: 3}
-  m_Name: OnAudioTrigger
+  m_Name: SpiritThree
   m_EditorClassIdentifier: 

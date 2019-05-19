@@ -1,4 +1,4 @@
-using UnityEngine;
+    using UnityEngine;
 using System.Collections;
 using UnityEngine.Events;
 
@@ -18,6 +18,8 @@ namespace VRKite.Interaction.VoiceControl
 
             public float volumeThresold = 0.9f;
             public float shoutWaitingTime = 1f;
+
+            public GameEvent onAudioTrigger;
             
             private float currentVolume;
             
@@ -89,10 +91,9 @@ namespace VRKite.Interaction.VoiceControl
                 currentVolume = HowLoud(spectrumData);
                 if (currentVolume > volumeThresold)
                 {
-                    Debug.Log("SHOUT!!");
-                    if(OnShout != null)
+                    if(onAudioTrigger != null)
                     {
-                        return OnShout(this);
+                        onAudioTrigger.Raise();
                     }
                 }
                 return false;
